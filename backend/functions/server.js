@@ -42,7 +42,7 @@ mongoose
     console.log(err);
   });
 
-app.use("/.netlify/functions/server", movieRoutes);
 app.use("/.netlify/functions/server", userRoutes);
+app.use("/.netlify/functions/server", movieRoutes);
 
 module.exports.handler = serverless(app);

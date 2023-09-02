@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "vercel-build": "echo hello"
+    "build": "netlify deploy --prod"
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
