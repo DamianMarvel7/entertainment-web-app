@@ -26,8 +26,12 @@ app.use((req, res, next) => {
 });
 
 // routes
+
 app.use("/api/movies", movieRoutes);
 app.use("/api/user", userRoutes);
+app.use("/", (req, res) => {
+  res.status(200).json("halo");
+});
 
 // connect to db
 mongoose
