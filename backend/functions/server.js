@@ -4,6 +4,7 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const movieRoutes = require("./routes/movieRoutes");
 const userRoutes = require("./routes/userRoutes");
+const serverless = require("serverless-http");
 
 // express app
 const app = express();
@@ -40,3 +41,8 @@ mongoose
   .catch((err) => {
     console.log(err);
   });
+
+app.use("/.netlify/functions/server", movieRoutes);
+app.use("/.netlify/functions/server", userRoutes);
+
+module.exports.handler = serverless(app);

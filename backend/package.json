@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "npm i"
+    "vercel-build": "echo hello"
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
@@ -10,7 +10,10 @@
     "jsonwebtoken": "^9.0.2",
     "mongodb": "^6.0.0",
     "mongoose": "^7.4.5",
+    "netlify-cli": "^16.2.0",
+    "netlify-lambda": "^2.0.16",
     "nodemon": "^3.0.1",
+    "serverless-http": "^3.2.0",
     "validator": "^13.11.0"
   }
 }
