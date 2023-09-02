@@ -12,12 +12,12 @@ const TrendingDetails = ({ movie }) => {
       <Bookmark movie={movie} />
       <picture className="movie-img">
         <source
-          srcSet={`./src/${movie.thumbnail.trending.large}`}
+          srcSet={`./${movie.thumbnail.trending.large}`}
           media="(min-width: 720px)"
         />
 
         <img
-          src={`./src/${movie.thumbnail.trending.small}`}
+          src={`./${movie.thumbnail.trending.small}`}
           alt="Image description"
           className="movie-img"
         />

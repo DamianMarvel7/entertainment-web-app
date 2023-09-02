@@ -13,15 +13,15 @@ const RecommendedDetails = ({ movie }) => {
         <Bookmark movie={movie} />
         <picture className="movie-img">
           <source
-            srcSet={`./src/${movie.thumbnail.regular.medium}`}
+            srcSet={`./${movie.thumbnail.regular.medium}`}
             media="(min-width: 768px)"
           />
           <source
-            srcSet={`./src/${movie.thumbnail.regular.large}`}
+            srcSet={`./${movie.thumbnail.regular.large}`}
             media="(min-width: 1440px)"
           />
           <img
-            src={`./src/${movie.thumbnail.regular.small}`}
+            src={`./${movie.thumbnail.regular.small}`}
             alt="Image description"
             className="movie-img"
           />

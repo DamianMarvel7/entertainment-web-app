@@ -13,15 +13,17 @@ export function MovieContextProvider({ children }) {
   const [selectedNav, setSelectedNav] = useState("home");
   const { user } = useAuthContext();
 
-  // console.log(user);
   useEffect(() => {
     const fetchWorkouts = async () => {
-      const response = await fetch("http://localhost:4000/api/movies", {
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${user.token}`,
-        },
-      });
+      const response = await fetch(
+        "https://entertainment-web-app-server.vercel.app/api/movies",
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${user.token}`,
+          },
+        }
+      );
       const json = await response.json();
       setMovies(json);
       setFilteredMovies(json);
@@ -50,14 +52,17 @@ export function MovieContextProvider({ children }) {
 
     setMovies(updatedMovies);
 
-    const response = await fetch("http://localhost:4000/api/movies/bookmark", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${user.token}`,
-      },
-      body: JSON.stringify({ id }),
-    });
+    const response = await fetch(
+      "https://entertainment-web-app-server.vercel.app/api/movies/bookmark",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${user.token}`,
+        },
+        body: JSON.stringify({ id }),
+      }
+    );
 
     const json = await response.json();
     setUserId(json.user_id);

@@ -11,7 +11,7 @@ export const useSignup = () => {
     setError(null);
 
     const response = await fetch(
-      "http://localhost:4000/api/user/signup-movie",
+      "https://entertainment-web-app-server.vercel.app/api/user/signup-movie",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
