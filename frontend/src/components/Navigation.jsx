@@ -27,8 +27,8 @@ const Navigation = () => {
         <img src={logo} alt="" />
       </Link>
       <nav className="primary-nav flex">
-        {/* <Link to="/login">login</Link>
-        <Link to="/signup">signup</Link> */}
+        <Link to="/login">login</Link>
+        <Link to="/signup">signup</Link>
         <div
           className={`nav-icon home-icon ${
             selectedNav === "home" ? "selected" : ""
